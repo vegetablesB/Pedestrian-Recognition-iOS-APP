@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B36E9FC2803555100451A0C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36E9FB2803555100451A0C /* CanvasView.swift */; };
+		3B36E9FE2803557B00451A0C /* CanvasViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36E9FD2803557B00451A0C /* CanvasViewWrapper.swift */; };
+		3B9976B7280B251F00666D59 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9976B6280B251F00666D59 /* ToastUI */; };
 		3BCD384D27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD384C27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift */; };
 		3BCD384F27EA8E3900387C96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD384E27EA8E3900387C96 /* ContentView.swift */; };
 		3BCD385127EA8E3A00387C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCD385027EA8E3A00387C96 /* Assets.xcassets */; };
 		3BCD385427EA8E3A00387C96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BCD385327EA8E3A00387C96 /* Preview Assets.xcassets */; };
 		3BCD386127EA951900387C96 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD386027EA951900387C96 /* ViewModel.swift */; };
 		3BCD386327EA999100387C96 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD386227EA999100387C96 /* Picker.swift */; };
-		3BCD386527EA9BA000387C96 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD386427EA9BA000387C96 /* ImagePicker.swift */; };
+		3BE1E63027F10ECF00375C64 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1E62F27F10ECF00375C64 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B36E9FB2803555100451A0C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		3B36E9FD2803557B00451A0C /* CanvasViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewWrapper.swift; sourceTree = "<group>"; };
+		3BA14F0C280E2B2400BEA354 /* Pedestrian-Recognition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pedestrian-Recognition-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3BCD384927EA8E3900387C96 /* Pedestrian Recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pedestrian Recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCD384C27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedestrian_RecognitionApp.swift; sourceTree = "<group>"; };
 		3BCD384E27EA8E3900387C96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,7 +30,7 @@
 		3BCD385327EA8E3A00387C96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BCD386027EA951900387C96 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3BCD386227EA999100387C96 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
-		3BCD386427EA9BA000387C96 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = "../../../../Downloads/My Images Starter/My Images/UIViewRepresentables/ImagePicker.swift"; sourceTree = "<group>"; };
+		3BE1E62F27F10ECF00375C64 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,15 +38,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9976B7280B251F00666D59 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4CE247281E060C00738633 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				3B36E9FB2803555100451A0C /* CanvasView.swift */,
+				3B36E9FD2803557B00451A0C /* CanvasViewWrapper.swift */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		3B4CE248281E062B00738633 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				3BCD386227EA999100387C96 /* Picker.swift */,
+				3BCD386027EA951900387C96 /* ViewModel.swift */,
+				3BE1E62F27F10ECF00375C64 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		3BCD384027EA8E3900387C96 = {
 			isa = PBXGroup;
 			children = (
+				3B4CE248281E062B00738633 /* ImagePicker */,
+				3B4CE247281E060C00738633 /* Draw */,
 				3BCD384B27EA8E3900387C96 /* Pedestrian Recognition */,
 				3BCD384A27EA8E3900387C96 /* Products */,
 			);
@@ -57,13 +85,11 @@
 		3BCD384B27EA8E3900387C96 /* Pedestrian Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				3BA14F0C280E2B2400BEA354 /* Pedestrian-Recognition-Info.plist */,
 				3BCD384C27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift */,
 				3BCD384E27EA8E3900387C96 /* ContentView.swift */,
 				3BCD385027EA8E3A00387C96 /* Assets.xcassets */,
 				3BCD385227EA8E3A00387C96 /* Preview Content */,
-				3BCD386027EA951900387C96 /* ViewModel.swift */,
-				3BCD386427EA9BA000387C96 /* ImagePicker.swift */,
-				3BCD386227EA999100387C96 /* Picker.swift */,
 			);
 			path = "Pedestrian Recognition";
 			sourceTree = "<group>";
@@ -92,6 +118,9 @@
 			dependencies = (
 			);
 			name = "Pedestrian Recognition";
+			packageProductDependencies = (
+				3B9976B6280B251F00666D59 /* ToastUI */,
+			);
 			productName = "Pedestrian Recognition";
 			productReference = 3BCD384927EA8E3900387C96 /* Pedestrian Recognition.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +149,9 @@
 				Base,
 			);
 			mainGroup = 3BCD384027EA8E3900387C96;
+			packageReferences = (
+				3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */,
+			);
 			productRefGroup = 3BCD384A27EA8E3900387C96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +179,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BCD384F27EA8E3900387C96 /* ContentView.swift in Sources */,
+				3B36E9FE2803557B00451A0C /* CanvasViewWrapper.swift in Sources */,
 				3BCD386327EA999100387C96 /* Picker.swift in Sources */,
-				3BCD386527EA9BA000387C96 /* ImagePicker.swift in Sources */,
+				3B36E9FC2803555100451A0C /* CanvasView.swift in Sources */,
+				3BE1E63027F10ECF00375C64 /* ImagePicker.swift in Sources */,
 				3BCD386127EA951900387C96 /* ViewModel.swift in Sources */,
 				3BCD384D27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift in Sources */,
 			);
@@ -282,7 +316,9 @@
 				DEVELOPMENT_TEAM = WRQPSPBF68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess";
+				INFOPLIST_FILE = "Pedestrian-Recognition-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pedestrian Recognition Need Camera Acess";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Need access to Photo Library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,7 +348,9 @@
 				DEVELOPMENT_TEAM = WRQPSPBF68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need Camera Acess";
+				INFOPLIST_FILE = "Pedestrian-Recognition-Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Pedestrian Recognition Need Camera Acess";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Need access to Photo Library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B9976B6280B251F00666D59 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BCD384127EA8E3900387C96 /* Project object */;
 }
