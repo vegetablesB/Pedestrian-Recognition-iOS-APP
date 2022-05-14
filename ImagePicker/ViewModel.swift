@@ -76,7 +76,7 @@ class ViewModel:ObservableObject {
                                    "imageb64": str]
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
-//        let url = URL(string: "http://10.0.0.36:6000/savemodify")
+        let url = URL(string: "http://10.0.0.36:6000/savemodify")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
