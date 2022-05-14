@@ -64,17 +64,9 @@
 			path = ImagePicker;
 			sourceTree = "<group>";
 		};
-		3B53B0A3282F329000106CF7 /* ReadmeFile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReadmeFile;
-			sourceTree = "<group>";
-		};
 		3BCD384027EA8E3900387C96 = {
 			isa = PBXGroup;
 			children = (
-				3B53B0A3282F329000106CF7 /* ReadmeFile */,
 				3B4CE248281E062B00738633 /* ImagePicker */,
 				3B4CE247281E060C00738633 /* Draw */,
 				3BCD384B27EA8E3900387C96 /* Pedestrian Recognition */,
