@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B36E9FC2803555100451A0C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36E9FB2803555100451A0C /* CanvasView.swift */; };
 		3B36E9FE2803557B00451A0C /* CanvasViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B36E9FD2803557B00451A0C /* CanvasViewWrapper.swift */; };
+		3B85195D2978B9C400124E81 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B85195C2978B9C400124E81 /* Alamofire */; };
+		3B8519602978FFB000124E81 /* MultipartForm in Frameworks */ = {isa = PBXBuildFile; productRef = 3B85195F2978FFB000124E81 /* MultipartForm */; };
 		3B9976B7280B251F00666D59 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3B9976B6280B251F00666D59 /* ToastUI */; };
 		3BCD384D27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD384C27EA8E3900387C96 /* Pedestrian_RecognitionApp.swift */; };
 		3BCD384F27EA8E3900387C96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCD384E27EA8E3900387C96 /* ContentView.swift */; };
@@ -39,6 +41,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B9976B7280B251F00666D59 /* ToastUI in Frameworks */,
+				3B8519602978FFB000124E81 /* MultipartForm in Frameworks */,
+				3B85195D2978B9C400124E81 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,8 @@
 			name = "Pedestrian Recognition";
 			packageProductDependencies = (
 				3B9976B6280B251F00666D59 /* ToastUI */,
+				3B85195C2978B9C400124E81 /* Alamofire */,
+				3B85195F2978FFB000124E81 /* MultipartForm */,
 			);
 			productName = "Pedestrian Recognition";
 			productReference = 3BCD384927EA8E3900387C96 /* Pedestrian Recognition.app */;
@@ -151,6 +157,8 @@
 			mainGroup = 3BCD384027EA8E3900387C96;
 			packageReferences = (
 				3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */,
+				3B85195B2978B9C400124E81 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3B85195E2978FFB000124E81 /* XCRemoteSwiftPackageReference "MultipartForm" */,
 			);
 			productRefGroup = 3BCD384A27EA8E3900387C96 /* Products */;
 			projectDirPath = "";
@@ -393,6 +401,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B85195B2978B9C400124E81 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3B85195E2978FFB000124E81 /* XCRemoteSwiftPackageReference "MultipartForm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davbeck/MultipartForm.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/quanshousio/ToastUI";
@@ -404,6 +428,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B85195C2978B9C400124E81 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B85195B2978B9C400124E81 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3B85195F2978FFB000124E81 /* MultipartForm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B85195E2978FFB000124E81 /* XCRemoteSwiftPackageReference "MultipartForm" */;
+			productName = MultipartForm;
+		};
 		3B9976B6280B251F00666D59 /* ToastUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B9976B5280B251F00666D59 /* XCRemoteSwiftPackageReference "ToastUI" */;
