@@ -6,7 +6,6 @@
 //
 // view model and post function to server
 import SwiftUI
-import Alamofire
 import MultipartForm
 
 typealias Parameters = [String: Any]
@@ -18,8 +17,6 @@ class ViewModel:ObservableObject {
     @Published var showPicker = false
     @Published var source: Picker.Source = .library
     var id = 0
-    
- 
     
     func showPhotoPicker() {
         if source == .camera {
@@ -55,6 +52,7 @@ class ViewModel:ObservableObject {
 //        return (image!, name)
 //    }
     // new post function based on Django backend
+    // Create new recognition
     func Post(image:UIImage) async throws -> (UIImage,String){
         
         struct product: Codable {
@@ -67,7 +65,6 @@ class ViewModel:ObservableObject {
         let url = URL(string: "http://10.0.0.221:8000/api/recognition/recognition/")
 //        let url = URL(string: "http://127.0.0.1:8000/api/recognition/recognition/1/prediction/")
         guard let requesturl = url else { fatalError() }
-//        let imageData = image.jpegData(compressionQuality: 1)
         let imageData =  image.jpegData(compressionQuality: 0.7)
 
         // create a recognition and get id from response
@@ -84,7 +81,6 @@ class ViewModel:ObservableObject {
         
         let (data, response) = try await URLSession.shared.data(for: request_creat)
         guard (response as? HTTPURLResponse)?.statusCode == 201 else { fatalError("Error while fetching data") }
-//        let responseString = String(data: data,encoding: .utf8)
         let responseString = try JSONDecoder().decode(product.self, from: data)
         let imagepath = responseString.update_image
         id = responseString.id
@@ -150,14 +146,13 @@ class ViewModel:ObservableObject {
         
         let (data, response) = try await URLSession.shared.data(for: request_creat)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
-//        let responseString = String(data: data,encoding: .utf8)
         let responseString = try JSONDecoder().decode(product.self, from: data)
         let imagepath = responseString.update_image
         let update_pos = responseString.update_pos
 //        print(update_pos)
 //        print(imagepath)
         
-        
+// Old post functino send base 64
 //        let str = image.jpegData(compressionQuality: 0.7)?.base64EncodedString() ?? ""
 //        let json: [String: Any] = ["name": name,
 //                                   "rectangle": rectstring,
@@ -171,7 +166,7 @@ class ViewModel:ObservableObject {
 //        request.httpBody = jsonData
 //        let (_, response) = try await URLSession.shared.data(for: request)
 //        guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching finish data") }
-////        let responseString = String(data: data,encoding: .utf8)
+//        let responseString = String(data: data,encoding: .utf8)
         if ((response as? HTTPURLResponse)?.statusCode == 200){
             return "success"
         }else{
