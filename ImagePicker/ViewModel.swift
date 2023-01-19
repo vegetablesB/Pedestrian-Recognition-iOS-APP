@@ -178,48 +178,4 @@ class ViewModel:ObservableObject {
             return "error"
         }
     }
-    
-    private func createHttpBody(binaryData: Data, mimeType: String) -> Data {
-        var parameters: Parameters? {
-            return [
-                "origin_image": Data.self
-            ]
-        }
-//        let boundary = "Boundary-\(NSUUID().uuidString)"
-        let boundary = "example.boundary.\(ProcessInfo.processInfo.globallyUniqueString)"
-        var postContent = "--\(boundary)\r\n"
-//        let fileName = "\(UUID().uuidString).jpeg"
-        let fileName = "123.jpeg"
-        let fieldName = "origin_image"
-//        postContent += "Content-Disposition: form-data; name=\"\(fieldName)\"\r\n"
-        postContent += "Content-Disposition: form-data; name=\"\(fieldName)\"; filename=\"\(fileName)\"\r\n"
-//        postContent += filename=\"\(fileName)\"\r\n"
-        print(postContent)
-        postContent += "Content-Type: \(mimeType)\r\n"
-        postContent += "\r\n"
-        
-        
-        var data = Data()
-        guard let postData = postContent.data(using: .utf8) else { return data }
-        data.append(postData)
-        data.append(binaryData)
-        guard let end = "\r\n".data(using: .utf8) else { return data }
-        data.append(end)
-
-//        if let parameters = parameters {
-//            var content = ""
-//            parameters.forEach {
-//                content += "\r\n--\(boundary)\r\n"
-//                content += "Content-Disposition: form-data; name=\"\($0.key)\"\r\n\r\n"
-//                content += "\($0.value)"
-//            }
-//            if let postData = content.data(using: .utf8) { data.append(postData) }
-//        }
-//        guard let endData = "\r\n--\(boundary)--\r\n".data(using: .utf8) else { return data }
-        guard let endData = "--\(boundary)--\r\n".data(using: .utf8) else { return data }
-        data.append(endData)
-//        print(data)
-        return data
-    }
-    
 }
