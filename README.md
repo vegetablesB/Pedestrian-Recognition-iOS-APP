@@ -1,7 +1,7 @@
 # Pedestrian-Recognition-iOS-APP
 This is an iOS APP for Pedestrian Recongition.
 
-[Backend design](https://github.com/vegetablesB/Pedestrian-Recognition-Backend).
+[Backend based on Django](https://github.com/vegetablesB/Pedestrian-Recognition-Backend-Django)
 
 ![representation](https://github.com/vegetablesB/Pedestrian-Recognition-iOS-APP/blob/main/ezgif.com-gif-maker-3.gif)
 
